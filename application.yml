@@ -78,7 +78,7 @@ spring:
 spring:
   config:
     activate:
-      on-profile: TransactionService
+      on-profile: transactionService
 
   datasource:
     url: jdbc:postgresql://localhost:5432/TransacationData
