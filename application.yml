@@ -1,11 +1,93 @@
-server:
-  port: 8085
+# =========================
+# COMMON CONFIG (ALL)
+# =========================
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
+# =========================
+# USER SERVICE DB
+# =========================
+---
 spring:
-  application:
-    name: config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/rsSnap12/micro-configurations-services
+  config:
+    activate:
+      on-profile: userservice
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/USERdb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+# =========================
+# ACCOUNT SERVICE DB
+# =========================
+---
+spring:
+  config:
+    activate:
+      on-profile: accountservice
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/accountServiceDb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# =========================
+# LOAN SERVICE DB
+# =========================
+---
+spring:
+  config:
+    activate:
+      on-profile: loanservice
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/LoanServiceDb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# =========================
+# TRANSACTION SERVICE DB
+# =========================
+---
+spring:
+  config:
+    activate:
+      on-profile: transactionservice
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/TransacationData
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
