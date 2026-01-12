@@ -74,11 +74,14 @@ spring:
 # =========================
 # TRANSACTION SERVICE DB
 # =========================
+# =========================
+# TRANSACTION SERVICE DB
+# =========================
 ---
 spring:
   config:
     activate:
-      on-profile: transactionService
+      on-profile: transactionservice   # ✅ SAME
 
   datasource:
     url: jdbc:postgresql://localhost:5432/TransacationData
@@ -90,4 +93,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+
 
