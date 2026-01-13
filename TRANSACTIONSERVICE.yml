@@ -5,8 +5,17 @@ spring:
   application:
     name: TRANSACTIONSERVICE
 
+  # Config Server (safe mode)
+  config:
+    import: optional:configserver:http://localhost:8085
+
+  # FORCE TOMCAT (VERY IMPORTANT)
+  main:
+    web-application-type: servlet
+
+  # (Optional – only if this service uses DB)
   datasource:
-    url: jdbc:postgresql://localhost:5432/TransacationData
+    url: jdbc:postgresql://localhost:5432/TRANSACTIONdb
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
@@ -15,12 +24,14 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    open-in-view: false
 
 eureka:
   instance:
     prefer-ip-address: true
+
   client:
-    fetch-registry: true
     register-with-eureka: true
+    fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
