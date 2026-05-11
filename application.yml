@@ -14,62 +14,62 @@ eureka:
 # # USER SERVICE DB
 # # =========================
 # ---
-# spring:
-#   config:
-#     activate:
-#       on-profile: userservice
+spring:
+  config:
+    activate:
+      on-profile: userservice
 
-#   datasource:
-#     url: jdbc:postgresql://localhost:5432/USERdb
-#     username: postgres
-#     password: root
-#     driver-class-name: org.postgresql.Driver
+  datasource:
+    url: jdbc:postgresql://localhost:5432/USERdb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
 
-#   jpa:
-#     hibernate:
-#       ddl-auto: update
-#     show-sql: true
-#     open-in-view: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
 
 # # =========================
 # # ACCOUNT SERVICE DB
 # # =========================
 # ---
-# spring:
-#   config:
-#     activate:
-#       on-profile: accountservice
+spring:
+  config:
+    activate:
+      on-profile: accountservice
 
-#   datasource:
-#     url: jdbc:postgresql://localhost:5432/accountServiceDb
-#     username: postgres
-#     password: root
-#     driver-class-name: org.postgresql.Driver
+  datasource:
+    url: jdbc:postgresql://localhost:5432/accountServiceDb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
 
-#   jpa:
-#     hibernate:
-#       ddl-auto: update
-#     show-sql: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 # # =========================
 # # LOAN SERVICE DB
 # # =========================
 # ---
-# spring:
-#   config:
-#     activate:
-#       on-profile: loanservice
+spring:
+  config:
+    activate:
+      on-profile: loanservice
 
-#   datasource:
-#     url: jdbc:postgresql://localhost:5432/LoanServiceDb
-#     username: postgres
-#     password: root
-#     driver-class-name: org.postgresql.Driver
+  datasource:
+    url: jdbc:postgresql://localhost:5432/LoanServiceDb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
 
-#   jpa:
-#     hibernate:
-#       ddl-auto: update
-#     show-sql: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 # # =========================
 # # TRANSACTION SERVICE DB
@@ -78,21 +78,21 @@ eureka:
 # # TRANSACTION SERVICE DB
 # # =========================
 # ---
-# spring:
-#   config:
-#     activate:
-#       on-profile: transactionservice   # ✅ SAME
+spring:
+  config:
+    activate:
+      on-profile: transactionservice   # ✅ SAME
 
-#   datasource:
-#     url: jdbc:postgresql://localhost:5432/TransacationData
-#     username: postgres
-#     password: root
-#     driver-class-name: org.postgresql.Driver
+  datasource:
+    url: jdbc:postgresql://localhost:5432/TransacationData
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
 
-#   jpa:
-#     hibernate:
-#       ddl-auto: update
-#     show-sql: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 
 
