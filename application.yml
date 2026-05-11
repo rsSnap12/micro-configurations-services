@@ -14,11 +14,19 @@ eureka:
 
 ---
 
+# =========================
+# USER SERVICE
+# =========================
+
 spring:
   config:
     activate:
       on-profile: user-service
 
+server:
+  port: 8081
+
+spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/bankdb
     username: postgres
@@ -33,11 +41,19 @@ spring:
 
 ---
 
+# =========================
+# ACCOUNT SERVICE
+# =========================
+
 spring:
   config:
     activate:
       on-profile: account-service
 
+server:
+  port: 8082
+
+spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/bankdb
     username: postgres
@@ -50,12 +66,20 @@ spring:
     show-sql: true
 
 ---
+
+# =========================
+# LOAN SERVICE
+# =========================
 
 spring:
   config:
     activate:
       on-profile: loan-service
 
+server:
+  port: 8083
+
+spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/bankdb
     username: postgres
@@ -69,11 +93,19 @@ spring:
 
 ---
 
+# =========================
+# TRANSACTION SERVICE
+# =========================
+
 spring:
   config:
     activate:
       on-profile: transaction-service
 
+server:
+  port: 8084
+
+spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/bankdb
     username: postgres
