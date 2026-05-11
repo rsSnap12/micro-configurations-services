@@ -23,10 +23,6 @@ spring:
     activate:
       on-profile: user-service
 
-server:
-  port: 8081
-
-spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/bankdb
     username: postgres
@@ -39,6 +35,9 @@ spring:
     show-sql: true
     open-in-view: false
 
+server:
+  port: 8081
+
 ---
 
 # =========================
@@ -50,10 +49,6 @@ spring:
     activate:
       on-profile: account-service
 
-server:
-  port: 8082
-
-spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/bankdb
     username: postgres
@@ -64,6 +59,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+server:
+  port: 8082
 
 ---
 
@@ -76,10 +74,6 @@ spring:
     activate:
       on-profile: loan-service
 
-server:
-  port: 8083
-
-spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/bankdb
     username: postgres
@@ -90,6 +84,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+server:
+  port: 8083
 
 ---
 
@@ -102,10 +99,6 @@ spring:
     activate:
       on-profile: transaction-service
 
-server:
-  port: 8084
-
-spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/bankdb
     username: postgres
@@ -116,3 +109,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+server:
+  port: 8084
